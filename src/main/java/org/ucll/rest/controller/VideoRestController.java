@@ -40,6 +40,7 @@ public class VideoRestController {
     public Collection<Movie> movies() {
 
         Collection<Movie> moviedb = vdb.getAllMovies();
+
         //ArrayList<Movie> temp = new ArrayList<>(moviedb);
 
         //for(int i = 0; i < temp.size(); i++){
