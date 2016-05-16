@@ -31,12 +31,13 @@ public class VideoRestController {
         vdb.addMovie(movie);
     }
 
+    @CrossOrigin
     @RequestMapping(value = "/movies",
             method = RequestMethod.GET,
             produces = MediaType.APPLICATION_JSON_VALUE)
     public Collection<Movie> movies() {
 
-       //Collection<Movie> moviedb = vdb.getAllMovies();
+       Collection<Movie> moviedb = vdb.getAllMovies();
 
         //ArrayList<Movie> temp = new ArrayList<>(moviedb);
 
@@ -45,6 +46,7 @@ public class VideoRestController {
         //}
 
 
+        /*
         Collection<Movie> moviedb = new ArrayList<Movie>();
 
         Movie movie1 = new Movie();
