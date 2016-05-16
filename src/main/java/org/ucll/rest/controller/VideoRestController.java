@@ -39,7 +39,7 @@ public class VideoRestController {
             produces = MediaType.APPLICATION_JSON_VALUE)
     public Collection<Movie> movies() {
 
-        Collection<Movie> moviedb = vdb.getAllMovies();
+       //Collection<Movie> moviedb = vdb.getAllMovies();
 
         //ArrayList<Movie> temp = new ArrayList<>(moviedb);
 
@@ -47,8 +47,8 @@ public class VideoRestController {
             //System.out.println(temp.get(i));
         //}
 
-        /*
-        Collection<Movie> movies = new ArrayList<Movie>();
+
+        Collection<Movie> moviedb = new ArrayList<Movie>();
 
         Movie movie1 = new Movie();
         movie1.setId(1);
@@ -60,8 +60,8 @@ public class VideoRestController {
         movie1.setEvaluation(MovieEvaluation.FIVESTARS);
         movie1.setSeen(true);
 
-        movies.add(movie1);
-        */
+        moviedb.add(movie1);
+
 /*
         movies.addAll(temp);
         System.out.println("");
