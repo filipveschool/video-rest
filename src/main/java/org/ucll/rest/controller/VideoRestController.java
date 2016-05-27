@@ -120,20 +120,10 @@ en dan plak je de tekst hieronder en druk je op send
         vdb.updateMovie(movie);
     }
 
-
-
-    /*
-    Dit is een werkend voorbeeld dat wel al uitgevoerd is:
-
-    http://localhost:8080/video-rest/deleteMovie/251
-
-     */
     @CrossOrigin
-    @RequestMapping(value = "/deleteMovie/{id}", method = RequestMethod.DELETE)
-    public void deleteMovie(@PathVariable("id") int id){
-
-        vdb.deleteMovieById(id);
-
+    @RequestMapping(value="/getMovie/{id}", method = RequestMethod.GET)
+    public Movie getMovieById(@PathVariable("id") int id){
+        return vdb.getMovieById(id);
     }
 
 /*
@@ -155,11 +145,22 @@ en dan plak je de tekst hieronder en druk je op send
         return "redirect:/movies/showmovies.htm";
     }
 
-    @RequestMapping(path = "/delete/{id}", value = "/delete/{id}", method = RequestMethod.GET)
-    public String deleteMovie(@PathVariable("id") int id, Model model) {
-        vdbDao.deleteMovieById(id);
-        return "redirect:/movies/showmovies.htm";
+  */
+
+    /*
+    Dit is een werkend voorbeeld dat wel al uitgevoerd is:
+
+    http://localhost:8080/video-rest/deleteMovie/251
+
+     */
+    @CrossOrigin
+    @RequestMapping(value = "/deleteMovie/{id}", method = RequestMethod.DELETE)
+    public void deleteMovie(@PathVariable("id") int id){
+
+        vdb.deleteMovieById(id);
+
     }
-*/
+
+
 
 }
