@@ -126,27 +126,6 @@ en dan plak je de tekst hieronder en druk je op send
         return vdb.getMovieById(id);
     }
 
-/*
-    // show updateForm of chosen Movie By Id
-    @RequestMapping(path = "/update/{id}", value = "/update/{id}", method = RequestMethod.GET)
-    public String updateMovie(@PathVariable("id") int id, Model model) {
-        Movie movie = vdbDao.getMovieById(id);
-
-        model.addAttribute("movie", movie);
-        return "crud/movies/update";
-    }
-
-    // update the movie to the database
-    @RequestMapping(value = "/updatemovie", method = RequestMethod.POST)
-    public String updateMovieToDatabase(@ModelAttribute("movie") Movie movie, BindingResult result, ModelMap modelMap,
-                                        Model model) {
-        // vdb.updateMovie(movie, movie.getId());
-        vdbDao.updateMovie(movie);
-        return "redirect:/movies/showmovies.htm";
-    }
-
-  */
-
     /*
     Dit is een werkend voorbeeld dat wel al uitgevoerd is:
 
